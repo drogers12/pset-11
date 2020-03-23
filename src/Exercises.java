@@ -43,7 +43,7 @@ public class Exercises {
           if (list.get(middle) < target) {
               start = middle + 1;
           } else if (list.get(middle) > target) {
-              end = middle - 1
+              end = middle - 1;
           } else if (list.get(middle) == target) {
               return middle;
           }
