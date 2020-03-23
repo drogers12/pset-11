@@ -258,7 +258,9 @@ public class Exercises {
            }
        }
 
-       
+       if (!ascending) {
+           Collections.reverse(list);
+       }
        return list;
    }
 
