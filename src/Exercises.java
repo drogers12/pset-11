@@ -220,6 +220,18 @@ public class Exercises {
               list[index] = list[i];
               list[i] = smallerNumber;
           }
+      } else if (!ascending) {
+          for (int i = 0; i < list.length - 1; i++) {
+              int index = i;
+              for (int j = i + 1; j < list.length; j++) {
+                  if (list[j] > list[index]) {
+                      index = j;
+                  }
+              }
+              int smallerNumber = list[index];
+              list[index] = list[i];
+              list[i] = smallerNumber;
+          }
       }
       return list;
   }
