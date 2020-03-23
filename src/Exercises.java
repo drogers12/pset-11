@@ -52,7 +52,25 @@ public class Exercises {
   }
 
   public int findMeFaster(String[] list, String target) {
-    return -1;
+      if (list == null || list.length == 0 || target.equals(null)) {
+          return 1;
+      }
+
+      int start = 0;
+      int middle = 0;
+      int end = list.length;
+
+      while (start <= end) {
+          middle = (start + end) / 2;
+          if (list[middle].compareTo(target) < 0) {
+              start = middle + 1;
+          } else if (list[middle].compareTo(target) > 0) {
+              end = middle - 1;
+          } else if (list[middle].compareTo(target) == 0) {
+              return middle;
+          }
+      }
+      return -1;
   }
 
   public int[] bubble(int[] list, boolean ascending) {
