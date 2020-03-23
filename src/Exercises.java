@@ -343,6 +343,19 @@ public class Exercises {
            }
            completeArrayIndex++;
        }
-       
+       ArrayList < Integer > rest;
+       int restIndex;
+       if (leftIndex >= left.size()) {
+           rest = right;
+           restIndex = rightIndex;
+       } else {
+           rest = left;
+           restIndex = leftIndex;
+       }
+
+       for (int i = restIndex; i < rest.size(); i++) {
+           complete.set(completeArrayIndex, rest.get(i));
+           completeArrayIndex++;
+       }
    }
 }
