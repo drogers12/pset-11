@@ -5,7 +5,7 @@ import java.util.Collections;
 public class Exercises {
 
   public int findMe(int[] list, int target) {
-      if (list == null || list.length = 0) {
+      if (list == null || list.length == 0) {
           return -1;
       }
       for (int i = 0; i < list.length; i++) {
